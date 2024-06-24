@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:galies/constants.dart';
 import 'package:galies/widgets/coustom_text_field.dart';
 import 'package:galies/widgets/custom_button.dart';
 
-import '../widgets/Coustom_password_text.dart';
+import '../constants.dart';
 
-class ForgotPassword extends StatelessWidget {
-  const ForgotPassword({super.key});
+class VerifyEmail extends StatelessWidget {
+  const VerifyEmail({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +21,7 @@ class ForgotPassword extends StatelessWidget {
                 Icons.arrow_back_ios_new,
                 color: primaryColor,
               )),
-          title:  Text("نسيت كلمة السر ",
+          title: Text("تحقق من البريد الإلكترونى",
               style: TextStyle(
                   color: secondaryColor,
                   fontSize: 24,
@@ -37,11 +36,11 @@ class ForgotPassword extends StatelessWidget {
               Padding(
                 padding:
                     EdgeInsets.only(top: 0, left: 10, right: 10, bottom: 10),
-                child: Row(mainAxisAlignment:MainAxisAlignment.center,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: const [
                     Center(
-                      child: Text(
-                          "بعد ادخالك البريد الاكترونى ستتلقى رساله بها \n              رمز التحقق الخاص بك",
+                      child: Text("قم بإدخال رمز التحقق المُرسل إليك",
                           style: TextStyle(
                               color: hintTextColor,
                               fontSize: 12,
@@ -50,35 +49,27 @@ class ForgotPassword extends StatelessWidget {
                   ],
                 ),
               ),
-               Padding(
+              Padding(
                 padding: EdgeInsets.all(12),
-                child: Column(  mainAxisAlignment: MainAxisAlignment.center,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                  Image.asset("assets/images/Forgot password-bro 1.png"),
-                    Row(
-                      children: const [
-                        Text("البريد الإلكترونى",
-                            style: TextStyle(
-                                color: primaryColor,
-                                fontSize: 20,
-                                fontWeight: FontWeight.w500,
-                                fontFamily: 'Noto Sans Arabic'))
-                      ],
-                    ),
+                    Image.asset("assets/images/Enter OTP-bro (1) 1.png"),
+                    Row(children: const [
+                      Material(
+                        elevation: 5.0,
+                        shadowColor: Colors.black,
+                        child: TextField(),
+                      )
+                    ]),
                   ],
                 ),
-              ),
-              CustomTextField(
-                mycontroller: TextEditingController(),
               ),
               const SizedBox(
                 height: 20,
               ),
-              
               CoustomButton(
-                  onTap: () {
-                    Navigator.pushNamed(context, "VerifyEmail");
-                  },
+                  onTap: () {},
                   text: "ارسال",
                   textColor: backColor,
                   buttonBorderColor: primaryColor,
@@ -87,7 +78,6 @@ class ForgotPassword extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              
             ],
           ),
         ),

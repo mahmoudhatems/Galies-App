@@ -3,6 +3,7 @@ import 'package:galies/screens/forgot_password.dart';
 import 'package:galies/screens/login_page.dart';
 import 'package:galies/screens/register.dart';
 import 'package:galies/screens/splash.dart';
+import 'package:galies/screens/verify_email_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
         "SplashScreen": (context) => SplashScreen(),
         "LoginPage": (context) => LoginPage(),
         "ForgotPassword": (context) => ForgotPassword(),
+        "VerifyEmail": (context) => VerifyEmail(),
       },
       initialRoute: "SplashScreen",
     );
