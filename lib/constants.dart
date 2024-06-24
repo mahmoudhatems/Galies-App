@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
  const splashColor=Color(0xffF0EEFF);
  const primaryColor=Color(0xff262062);
  const secondaryColor=Color(0xff263238);
+  const hintTextColor=Color(0xff455A64);
   const ternaryColor=Color(0xffDADADA);
   const backColor=Color(0xffFFFFFF);
   const txtsecondarycolor=Color(0xff000000);
