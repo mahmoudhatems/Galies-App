@@ -20,7 +20,7 @@ class OnboardingPage extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(top: 60, bottom: 20),
                   child: Image.asset(
-                    "assets/images/Audiobook-pana 1.png",
+                    "assets/images/Audiobook-pana 1.jpg",
                     width: 350,
                   ),
                 ),
@@ -52,44 +52,27 @@ class OnboardingPage extends StatelessWidget {
             SizedBox(
               height: 16,
             ),
-            GestureDetector(
+            CoustomButton(
               onTap: () {
                 Navigator.pushNamed(context, "RegisterPage");
               },
-              child: Container(
-                width: double.infinity,
-                height: 63,
-                child: Center(
-                    child: Text(
-                  "انشاء حساب ",
-                  style: TextStyle(color: backColor, fontSize: 16),
-                )),
-                decoration: BoxDecoration(
-                    color: primaryColor,
-                    borderRadius: BorderRadius.circular(16)),
-              ),
+              text: "انشاء حساب",
+              textColor: backColor,
+              buttonBorderColor: primaryColor,
+              buttonColor: primaryColor,
             ),
-            SizedBox(
+           const SizedBox(
               height: 16,
             ),
-            GestureDetector(
+           CoustomButton(
               onTap: () {
                 Navigator.pushNamed(context, "");
               },
-              child: Container(
-                width: double.infinity,
-                height: 63,
-                child: Center(
-                    child: Text(
-                  "تسجيل الدخول",
-                  style: TextStyle(color: primaryColor, fontSize: 16),
-                )),
-                decoration: BoxDecoration(
-                    color: backColor,
-                    border: Border.all(color: primaryColor),
-                    borderRadius: BorderRadius.circular(16)),
-              ),
-            )
+              text: "تسجيل الدخول",
+              textColor: primaryColor,
+              buttonBorderColor: primaryColor,
+              buttonColor: backColor,
+            ),
           ],
         ),
       ),

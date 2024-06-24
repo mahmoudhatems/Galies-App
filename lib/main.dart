@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:galies/screens/login_page.dart';
 import 'package:galies/screens/register.dart';
 import 'package:galies/screens/splash.dart';
-
-
 
 void main() {
   runApp(const MyApp());
@@ -16,9 +15,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       routes: {
-        "RegisterPage":(context)=>RegisterPage(),
+        "RegisterPage": (context) => RegisterPage(),
+        "SplashScreen": (context) => SplashScreen(),
+        "LoginPage": (context) => LoginPage(),
       },
-      home: SplashScreen(),
+      initialRoute: "SplashScreen",
     );
   }
 }
