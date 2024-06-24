@@ -38,7 +38,7 @@ class _SplashScreenState extends State<SplashScreen> {
            Image.asset("assets/images/splash/splashimg.png",width: 170,),
          ],
        ),
-       SizedBox(height: 100,),
+       SizedBox(height: 10,),
 
        Text("جليس",style:TextStyle(color: primaryColor,fontSize: 48,fontFamily:'Noto Sans Arabic'),)
       
