@@ -10,6 +10,6 @@ import 'package:flutter/material.dart';
   const backColor=Color(0xffFFFFFF);
   const txtsecondarycolor=Color(0xff000000);
   const bordarcolorwhite=Color(0xffDADADA);
- 
+ const String fontFamily="Noto Sans Arabic";
 
  

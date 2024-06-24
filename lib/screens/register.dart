@@ -14,7 +14,7 @@ class RegisterPage extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           leading: IconButton(
-              onPressed: () {},
+              onPressed: () {  Navigator.pop(context);},
               icon: const Icon(
                 Icons.arrow_back_ios_new,
                 color: primaryColor,
@@ -63,12 +63,12 @@ class RegisterPage extends StatelessWidget {
                   ],
                 ),
               ),
-               CustomTextField(
+              CustomTextField(
                 mycontroller: TextEditingController(),
               ),
               const Padding(
-                padding:  EdgeInsets.all(12),
-                child:  Row(
+                padding: EdgeInsets.all(12),
+                child: Row(
                   children: [
                     Text("البريد الإلكترونى",
                         style: TextStyle(
@@ -83,8 +83,8 @@ class RegisterPage extends StatelessWidget {
                 mycontroller: TextEditingController(),
               ),
               const Padding(
-                padding:  EdgeInsets.all(12),
-                child:  Row(
+                padding: EdgeInsets.all(12),
+                child: Row(
                   children: [
                     Text("كلمة السر",
                         style: TextStyle(
@@ -98,21 +98,130 @@ class RegisterPage extends StatelessWidget {
               CustomPassTextField(
                 mycontroller: TextEditingController(),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-               CoustomButton(
-              onTap: () {
-               
-              },
-              text: "انشاء حساب",
-              textColor: backColor,
-              buttonBorderColor: primaryColor,
-              buttonColor: primaryColor,
-            ),
-
-
-
+              CoustomButton(
+                  onTap: () {},
+                  text: "انشاء حساب",
+                  textColor: backColor,
+                  buttonBorderColor: primaryColor,
+                  buttonColor: primaryColor,
+                  fontFamily: 'Noto Sans Arabic'),
+              const SizedBox(
+                height: 20,
+              ),
+              const Row(
+                children: [
+                  Expanded(
+                      child: Divider(
+                    color: ternaryColor,
+                    thickness: 1,
+                    height: 1,
+                  )),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 8.0),
+                    child: Text(
+                      "او",
+                      style: TextStyle(
+                          color: secondaryColor,
+                          fontSize: 18,
+                          fontFamily: 'Noto Sans Arabic'),
+                    ),
+                  ),
+                  Expanded(
+                      child: Divider(
+                    color: ternaryColor,
+                    thickness: 1,
+                    height: 1,
+                  )),
+                ],
+              ),
+              SizedBox(height: 8,),
+              GestureDetector(
+                behavior: HitTestBehavior.opaque,
+                onTap: () {},
+                child: Container(
+                  width: double.infinity,
+                  height: 60,
+                  decoration: BoxDecoration(
+                      border: Border.all(color: ternaryColor),
+                      color: Colors.transparent,
+                      borderRadius: BorderRadius.circular(16)),
+                  child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Image.asset("assets/images/google.png"),
+                        const Center(
+                          child: Text(
+                            "التسجيل باستخدام حساب جوجل",
+                            style: TextStyle(
+                                color: secondaryColor,
+                                fontSize: 18,
+                                fontFamily: fontFamily),
+                          ),
+                        ),
+                      ]),
+                ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              GestureDetector(
+                behavior: HitTestBehavior.opaque,
+                onTap: () {},
+                child: Container(
+                  width: double.infinity,
+                  height: 60,
+                  decoration: BoxDecoration(
+                      border: Border.all(color: ternaryColor),
+                      color: Colors.transparent,
+                      borderRadius: BorderRadius.circular(16)),
+                  child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Image.asset("assets/images/facebook (1) 1.png"),
+                        const Center(
+                          child: Text(
+                            "التسجيل باستخدام حساب فيسبوك",
+                            style: TextStyle(
+                                color: secondaryColor,
+                                fontSize: 18,
+                                fontFamily: fontFamily),
+                          ),
+                        ),
+                      ]),
+                ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Center(
+                    child: Text(
+                      "لديك حساب ؟ ",
+                      style: TextStyle(
+                          color: secondaryColor,
+                          fontSize: 14,
+                          fontFamily: fontFamily),
+                    ),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(context, "LoginPage");
+                    },
+                    child: const Text(
+                      "تسجيل الدخول",
+                      style: TextStyle(
+                          color: primaryColor,
+                          fontSize: 14,
+                          fontFamily: fontFamily),
+                    ),
+                  ),
+                ],
+              )
             ],
           ),
         ),

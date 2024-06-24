@@ -3,7 +3,7 @@ import 'package:galies/constants.dart';
 
 class CoustomButton extends StatelessWidget {
  const CoustomButton(
-      {super.key, this.onTap,
+      {super.key, this.onTap,this.fontFamily,
       required this.text,
       required this.buttonBorderColor,
       required this.buttonColor,
@@ -14,6 +14,8 @@ class CoustomButton extends StatelessWidget {
   final Color textColor;
   final Color buttonColor;
   final Color buttonBorderColor;
+ final String? fontFamily;
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -26,11 +28,17 @@ class CoustomButton extends StatelessWidget {
             border: Border.all(color: buttonBorderColor),
             color: buttonColor,
             borderRadius: BorderRadius.circular(16)),
-        child: Center(
+        child: Row(
+mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+             
+          Center(
             child: Text(
-          text,
-          style: TextStyle(color: textColor, fontSize: 16),
-        )),
+              text,
+              style: TextStyle(color: textColor, fontSize: 16,fontFamily: fontFamily),
+            ),
+          ),
+        ]),
       ),
     );
   }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:galies/screens/forgot_password.dart';
 import 'package:galies/screens/login_page.dart';
 import 'package:galies/screens/register.dart';
 import 'package:galies/screens/splash.dart';
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
         "RegisterPage": (context) => RegisterPage(),
         "SplashScreen": (context) => SplashScreen(),
         "LoginPage": (context) => LoginPage(),
+        "ForgotPassword": (context) => ForgotPassword(),
       },
       initialRoute: "SplashScreen",
     );

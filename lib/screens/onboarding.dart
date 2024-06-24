@@ -60,18 +60,20 @@ class OnboardingPage extends StatelessWidget {
               textColor: backColor,
               buttonBorderColor: primaryColor,
               buttonColor: primaryColor,
+              fontFamily: 'Noto Sans Arabic'
             ),
            const SizedBox(
               height: 16,
             ),
            CoustomButton(
               onTap: () {
-                Navigator.pushNamed(context, "");
+                Navigator.pushNamed(context, "LoginPage");
               },
               text: "تسجيل الدخول",
               textColor: primaryColor,
               buttonBorderColor: primaryColor,
               buttonColor: backColor,
+              fontFamily: 'Noto Sans Arabic'
             ),
           ],
         ),

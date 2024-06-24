@@ -29,11 +29,11 @@ class _CustomPassTextFieldState extends State<CustomPassTextField> {
               },
               child: obscureText
                   ? const Icon(
-                      Icons.visibility_off,
+                      Icons.visibility_off_outlined,
                       color: secondaryColor,
                     )
                   : const Icon(
-                      Icons.visibility,
+                      Icons.visibility_outlined,
                       color: secondaryColor,
                     )),
           hintText: widget.hintText,
