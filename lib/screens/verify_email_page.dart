@@ -1,16 +1,46 @@
 import 'package:flutter/material.dart';
-import 'package:galies/widgets/coustom_text_field.dart';
+import 'package:flutter/widgets.dart';
 import 'package:galies/widgets/custom_button.dart';
-
+import 'package:pinput/pinput.dart';
 import '../constants.dart';
 
-class VerifyEmail extends StatelessWidget {
-  const VerifyEmail({super.key});
+class VerifyEmail extends StatefulWidget {
+  VerifyEmail({super.key});
+
+  @override
+  State<VerifyEmail> createState() => _VerifyEmailState();
+}
+
+class _VerifyEmailState extends State<VerifyEmail> {
+  final defualtPinTheme = PinTheme(
+      width: 54,
+      height: 54,
+      textStyle: TextStyle(fontSize: 16, color: txtsecondarycolor),
+      decoration: BoxDecoration(
+          color:Color(0xffFEF7FF) ,
+          borderRadius: BorderRadius.circular(8),
+          boxShadow:  [
+        BoxShadow(
+          color: Colors.black26, // Shadow color
+          blurRadius: 4,         // Shadow blur radius
+          offset: Offset(0, 4,), 
+          
+           // Shadow offset
+        ),
+         BoxShadow(
+          color: Colors.black26, // Shadow color
+          blurRadius: 0,         // Shadow blur radius
+          offset: Offset(0, 0,), 
+          
+           // Shadow offset
+        ),
+      ],
+          border: Border.all(color: Colors.transparent)));
 
   @override
   Widget build(BuildContext context) {
     return Directionality(
-      textDirection: TextDirection.rtl,
+      textDirection: TextDirection.ltr,
       child: Scaffold(
         appBar: AppBar(
           leading: IconButton(
@@ -55,14 +85,18 @@ class VerifyEmail extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Image.asset("assets/images/Enter OTP-bro (1) 1.png"),
-                    Row(children: const [
-                      Material(
-                        elevation: 5.0,
-                        shadowColor: Colors.black,
-                        child: TextField(),
-                      )
-                    ]),
                   ],
+                ),
+              ),
+              Pinput(
+                length: 5,
+                autofocus: true,
+                defaultPinTheme: defualtPinTheme,
+                focusedPinTheme: defualtPinTheme.copyWith(
+                  decoration: BoxDecoration(
+                    border: Border.all(color: primaryColor),
+                    borderRadius: BorderRadius.circular(8),
+                  ),
                 ),
               ),
               const SizedBox(

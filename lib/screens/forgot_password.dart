@@ -22,7 +22,7 @@ class ForgotPassword extends StatelessWidget {
                 Icons.arrow_back_ios_new,
                 color: primaryColor,
               )),
-          title:  Text("نسيت كلمة السر ",
+          title:  const Text("نسيت كلمة السر ",
               style: TextStyle(
                   color: secondaryColor,
                   fontSize: 24,
@@ -34,11 +34,11 @@ class ForgotPassword extends StatelessWidget {
           padding: const EdgeInsets.symmetric(vertical: 2, horizontal: 12),
           child: ListView(
             children: [
-              Padding(
+              const Padding(
                 padding:
                     EdgeInsets.only(top: 0, left: 10, right: 10, bottom: 10),
                 child: Row(mainAxisAlignment:MainAxisAlignment.center,
-                  children: const [
+                  children: [
                     Center(
                       child: Text(
                           "بعد ادخالك البريد الاكترونى ستتلقى رساله بها \n              رمز التحقق الخاص بك",
@@ -51,12 +51,12 @@ class ForgotPassword extends StatelessWidget {
                 ),
               ),
                Padding(
-                padding: EdgeInsets.all(12),
+                padding: const EdgeInsets.all(12),
                 child: Column(  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                   Image.asset("assets/images/Forgot password-bro 1.png"),
-                    Row(
-                      children: const [
+                    const Row(
+                      children: [
                         Text("البريد الإلكترونى",
                             style: TextStyle(
                                 color: primaryColor,

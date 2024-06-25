@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
         "ForgotPassword": (context) => ForgotPassword(),
         "VerifyEmail": (context) => VerifyEmail(),
       },
-      initialRoute: "SplashScreen",
+      initialRoute: "VerifyEmail",
     );
   }
 }
