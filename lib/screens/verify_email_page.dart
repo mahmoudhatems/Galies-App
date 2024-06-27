@@ -1,46 +1,46 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:galies/widgets/custom_button.dart';
 import 'package:pinput/pinput.dart';
 import '../constants.dart';
 
-class VerifyEmail extends StatefulWidget {
-  VerifyEmail({super.key});
+class VerifyEmail extends StatelessWidget {
+   VerifyEmail({super.key});
 
-  @override
-  State<VerifyEmail> createState() => _VerifyEmailState();
-}
-
-class _VerifyEmailState extends State<VerifyEmail> {
   final defualtPinTheme = PinTheme(
       width: 54,
       height: 54,
-      textStyle: TextStyle(fontSize: 16, color: txtsecondarycolor),
+      textStyle: const TextStyle(fontSize: 16, color: txtsecondarycolor),
       decoration: BoxDecoration(
-          color:Color(0xffFEF7FF) ,
+          color: const Color(0xffFEF7FF),
           borderRadius: BorderRadius.circular(8),
-          boxShadow:  [
-        BoxShadow(
-          color: Colors.black26, // Shadow color
-          blurRadius: 4,         // Shadow blur radius
-          offset: Offset(0, 4,), 
-          
-           // Shadow offset
-        ),
-         BoxShadow(
-          color: Colors.black26, // Shadow color
-          blurRadius: 0,         // Shadow blur radius
-          offset: Offset(0, 0,), 
-          
-           // Shadow offset
-        ),
-      ],
+          boxShadow: const [
+            BoxShadow(
+              color: Colors.black26, // Shadow color
+              blurRadius: 4, // Shadow blur radius
+              offset: Offset(
+                0,
+                4,
+              ),
+
+              // Shadow offset
+            ),
+            BoxShadow(
+              color: Colors.black26, // Shadow color
+              blurRadius: 0, // Shadow blur radius
+              offset: Offset(
+                0,
+                0,
+              ),
+
+              // Shadow offset
+            ),
+          ],
           border: Border.all(color: Colors.transparent)));
 
   @override
   Widget build(BuildContext context) {
     return Directionality(
-      textDirection: TextDirection.ltr,
+      textDirection: TextDirection.rtl,
       child: Scaffold(
         appBar: AppBar(
           leading: IconButton(
@@ -51,7 +51,7 @@ class _VerifyEmailState extends State<VerifyEmail> {
                 Icons.arrow_back_ios_new,
                 color: primaryColor,
               )),
-          title: Text("تحقق من البريد الإلكترونى",
+          title: const Text("تحقق من البريد الإلكترونى",
               style: TextStyle(
                   color: secondaryColor,
                   fontSize: 24,
@@ -63,12 +63,12 @@ class _VerifyEmailState extends State<VerifyEmail> {
           padding: const EdgeInsets.symmetric(vertical: 2, horizontal: 12),
           child: ListView(
             children: [
-              Padding(
+              const Padding(
                 padding:
                     EdgeInsets.only(top: 0, left: 10, right: 10, bottom: 10),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
+                  children: [
                     Center(
                       child: Text("قم بإدخال رمز التحقق المُرسل إليك",
                           style: TextStyle(
@@ -80,7 +80,7 @@ class _VerifyEmailState extends State<VerifyEmail> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.all(12),
+                padding: const EdgeInsets.all(12),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -88,19 +88,37 @@ class _VerifyEmailState extends State<VerifyEmail> {
                   ],
                 ),
               ),
-              Pinput(
-                length: 5,
-                autofocus: true,
-                defaultPinTheme: defualtPinTheme,
-                focusedPinTheme: defualtPinTheme.copyWith(
-                  decoration: BoxDecoration(
-                    border: Border.all(color: primaryColor),
-                    borderRadius: BorderRadius.circular(8),
+              Directionality(
+                textDirection: TextDirection.ltr,
+                child: Expanded(
+                  child: Pinput(
+                    length: 5,
+                    autofocus: true,
+                    defaultPinTheme: defualtPinTheme,
+                    focusedPinTheme: defualtPinTheme.copyWith(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(8),
+                          boxShadow: const [
+                            BoxShadow(
+                                color: primaryColor, // Shadow color
+                                blurRadius: 3,
+                                spreadRadius: 2,
+                                // Shadow blur radius
+                                offset: Offset(
+                                  0,
+                                  4,
+                                ),
+                                blurStyle: BlurStyle.outer
+                
+                                // Shadow offset
+                                ),
+                          ]),
+                    ),
                   ),
                 ),
               ),
               const SizedBox(
-                height: 20,
+                height: 30,
               ),
               CoustomButton(
                   onTap: () {},

@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
  const secondaryColor=Color(0xff263238);
   const hintTextColor=Color(0xff455A64);
   const ternaryColor=Color(0xffDADADA);
-  const backColor=Color(0xffFFFFFF);
+  const backColor=Color(0xffFEF7FF);
   const txtsecondarycolor=Color(0xff000000);
   const bordarcolorwhite=Color(0xffDADADA);
  const String fontFamily="Noto Sans Arabic";
