@@ -36,12 +36,12 @@ class LoginPage extends StatelessWidget {
             children: [
                Padding(
                 padding:
-                    EdgeInsets.only(top: 10.0, left: 10, right: 10, bottom: 10),
+                    const EdgeInsets.only(top: 10.0, left: 10, right: 10, bottom: 10),
                 child: Row(
                  
                  
                   children: [
-                    Text("مرحبا بعودتك  ",
+                    const Text("مرحبا بعودتك  ",
                         style: TextStyle(
                             color: secondaryColor,
                             fontSize: 24,
@@ -92,7 +92,7 @@ class LoginPage extends StatelessWidget {
                       onTap:  (){
                         Navigator.pushNamed(context, "ForgotPassword");
                       },
-                       child: Text("هل نسيت كلمة السر ؟",
+                       child: const Text("هل نسيت كلمة السر ؟",
                                 style: TextStyle(
                                     color: primaryColor,
                                     fontSize: 14,
@@ -106,7 +106,9 @@ class LoginPage extends StatelessWidget {
                 height: 6,
               ),
               CoustomButton(
-                  onTap: () {},
+                  onTap: () {
+                     Navigator.pushNamed(context, "HomeScreen");
+                  },
                   text: "تسجيل الدخول",
                   textColor: backColor,
                   buttonBorderColor: primaryColor,
@@ -141,7 +143,7 @@ class LoginPage extends StatelessWidget {
                   )),
                 ],
               ),
-               SizedBox(height: 10,),
+               const SizedBox(height: 10,),
               GestureDetector(
                 behavior: HitTestBehavior.opaque,
                 onTap: () {},

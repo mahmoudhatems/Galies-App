@@ -26,11 +26,11 @@ class OnboardingPage extends StatelessWidget {
                 ),
               ],
             ),
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(top: 8.0, bottom: 8),
+                  padding: EdgeInsets.only(top: 8.0, bottom: 8),
                   child: Text('.مرحبا بك فى جليس ',
                       style: TextStyle(
                           fontWeight: FontWeight.bold,
@@ -40,8 +40,8 @@ class OnboardingPage extends StatelessWidget {
                 ),
               ],
             ),
-            Padding(
-              padding: const EdgeInsets.only(top: 8, bottom: 8),
+            const Padding(
+              padding: EdgeInsets.only(top: 8, bottom: 8),
               child: Text(
                   'استمتع بسماع الكتب بأفضل جودة صوتية\n                                           .و أداء متميز',
                   style: TextStyle(
@@ -49,7 +49,7 @@ class OnboardingPage extends StatelessWidget {
                       fontSize: 20,
                       fontFamily: 'Noto Sans Arabic')),
             ),
-            SizedBox(
+            const SizedBox(
               height: 16,
             ),
             CoustomButton(

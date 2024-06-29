@@ -4,7 +4,7 @@ import 'package:pinput/pinput.dart';
 import '../constants.dart';
 
 class VerifyEmail extends StatelessWidget {
-   VerifyEmail({super.key});
+  VerifyEmail({super.key});
 
   final defualtPinTheme = PinTheme(
       width: 54,
@@ -109,7 +109,7 @@ class VerifyEmail extends StatelessWidget {
                                   4,
                                 ),
                                 blurStyle: BlurStyle.outer
-                
+
                                 // Shadow offset
                                 ),
                           ]),
@@ -121,7 +121,9 @@ class VerifyEmail extends StatelessWidget {
                 height: 30,
               ),
               CoustomButton(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.pushNamed(context, "ResetPassword");
+                  },
                   text: "ارسال",
                   textColor: backColor,
                   buttonBorderColor: primaryColor,

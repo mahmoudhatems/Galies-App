@@ -102,7 +102,9 @@ class RegisterPage extends StatelessWidget {
                 height: 20,
               ),
               CoustomButton(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.pushNamed(context, "HomeScreen");
+                  },
                   text: "انشاء حساب",
                   textColor: backColor,
                   buttonBorderColor: primaryColor,

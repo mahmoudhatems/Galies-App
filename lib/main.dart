@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:galies/screens/forgot_password.dart';
+import 'package:galies/screens/home.dart';
 import 'package:galies/screens/login_page.dart';
 import 'package:galies/screens/register.dart';
+import 'package:galies/screens/reset_password.dart';
 import 'package:galies/screens/splash.dart';
 import 'package:galies/screens/verify_email_page.dart';
 
@@ -20,10 +22,13 @@ class MyApp extends StatelessWidget {
         "RegisterPage": (context) => RegisterPage(),
         "SplashScreen": (context) => SplashScreen(),
         "LoginPage": (context) => LoginPage(),
+        "HomeScreen":(context)=>HomeScreen(),
         "ForgotPassword": (context) => ForgotPassword(),
         "VerifyEmail": (context) => VerifyEmail(),
+        "ResetPassword":(context)=>ResetPassword(),
+
       },
-      initialRoute: "VerifyEmail",
+      initialRoute: "SplashScreen",
     );
   }
 }
